@@ -1,0 +1,76 @@
+body {
+    background-color: #111;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: #f00;
+}
+
+.social-links a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #f00;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure the images have a fixed height for proper alignment */
+.gallery-img {
+    height: 300px; /* Set a fixed height for all images */
+}
+
+.bg-dark {
+    background-color: #000 !important;
+}
+
+.position-fixed {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: auto;
+    text-align: right;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links img {
+    width: 30px;
+}
+
+.social-links a {
+    margin-left: 10px;
+}
+
+/* Adjust spacing around "SHUTTER" and buttons */
+.sidebar h1 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul.nav {
+    margin-bottom: 20px;
+}

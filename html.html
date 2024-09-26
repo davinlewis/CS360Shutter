@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shutter Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Image Gallery -->
+            <div class="col-md-9">
+                <div class="row g-2 p-3">
+                    <div class="col-md-6">
+                        <img src="https://www.uidaho.edu/-/media/uidaho-responsive/images/alumni/sarb/events-page-images/1200x1200-vandal-walk.jpg?rev=13c745fc24b14cc7842fb1e204284fb3" class="img-fluid rounded gallery-img" alt="Vandal" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://www.uidaho.edu/-/media/uidaho-responsive/images/current-students/student-involvement/student-organizations/find-a-club/find-a-club-1200x675-1.jpg?rev=0dced466bcdc48fb9d9849077ac7df2a" class="img-fluid rounded gallery-img" alt="Cookies" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://www.uidaho.edu/-/media/uidaho-responsive/images/current-students/student-involvement/events/palousafest/palousafest-lr-16.jpg?rev=c54af7c722434bcaa804cbbd577b2707" class="img-fluid rounded gallery-img" alt="Fair" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://www.uidaho.edu/-/media/uidaho-responsive/images/current-students/recreation-wellbeing/spirit-squad/cheer-squad-16-9.jpg?rev=af9bdd15defd48be958cd03915519990" class="img-fluid rounded gallery-img" alt="Cheer" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://static.studyusa.com/school/cdn_Gyua28RKNm7R4xG6S3X-GAq8mlkDGUtu.jpg?format=webp" class="img-fluid rounded gallery-img" alt="Building" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://assets.collegedunia.com/public/college_data/images/studyabroad/appImage/college_1674_01-12:30_University_oF_Idaho.jpeg" class="img-fluid rounded gallery-img" alt="Campus" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://www.uidaho.edu/-/media/uidaho-responsive/images/home/2024/april/2404-hero-loop.aspx" class="img-fluid rounded gallery-img" alt="SignPeople" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar (Navigation on the Right, Fixed to the Top Right) -->
+            <div class="col-md-3 sidebar">
+                <h1>SHUTTER</h1>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="html.html" style="color:orange">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="photos.html">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="bio.html">Bio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Social Media Links (Images aligned horizontally) -->
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="https://wallpapers.com/images/hd/black-white-facebook-logo-v7hi2gs647dllnuv-v7hi2gs647dllnuv.jpg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="https://static-00.iconduck.com/assets.00/twitter-icon-1024x845-91mj700l.png" alt="Twitter">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="https://www.clipartmax.com/png/full/231-2312557_500-instagram-logo-instagram-logo-white-vector.png" alt="Instagram" onclick="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Modal for Image Preview -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" class="img-fluid" id="modalImage" alt="Image Preview">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS to handle image modal -->
+    <script>
+        function openModal(element) {
+            var modalImg = document.getElementById("modalImage");
+            modalImg.src = element.src;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shutter Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adjusts the margin for the text to avoid overlap with the sidebar */
+        .main-content {
+            margin-right: 250px; /* Leave space for the sidebar */
+            padding: 20px;
+            color: white;
+        }
+
+        /* Sidebar fixed to the top-right */
+        .sidebar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 200px;
+        }
+
+        .social-links img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        /* Responsive adjustment for smaller screens */
+        @media (max-width: 768px) {
+            .main-content {
+                margin-right: 0; /* Removes margin when the screen is narrow */
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .social-links img {
+                margin-right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Main Content (Text or Images) -->
+            <div class="col-md-9 main-content">
+                <h1>Welcome to the Personal Blog</h1>
+                <p>
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Nullam velit interdum cubilia dignissim conubia sit ante dictumst condimentum. Class curabitur mi dignissim aliquam metus hac congue luctus. Rhoncus posuere venenatis iaculis porttitor gravida facilisis. Lacinia in habitant mollis tempor mi interdum vivamus curae. Finibus himenaeos hac lacinia commodo porta venenatis nibh. Pellentesque magnis scelerisque rutrum pellentesque a blandit porta mi. Facilisis dolor fames, montes eleifend curae neque urna. Nisl torquent hendrerit felis luctus quis accumsan egestas.
+
+                    Ipsum ornare nec sed potenti auctor non taciti dis duis? Primis dictumst nam senectus donec ac, justo rutrum. Congue tincidunt ipsum proin neque sodales etiam pretium. Varius ultrices sodales tortor congue nostra dis vestibulum molestie? Ut non senectus, est integer sollicitudin fusce. Luctus natoque lacinia sem; faucibus facilisis quam. Condimentum non leo etiam netus morbi facilisis.
+                </p>
+            </div>
+
+            <!-- Sidebar (Navigation on the Right, Fixed to the Top Right) -->
+            <div class="col-md-3 sidebar">
+                <h1>SHUTTER</h1>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="html.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="photos.html">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="bio.html">Bio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" style="color:orange">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Social Media Links (Images aligned horizontally) -->
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="https://wallpapers.com/images/hd/black-white-facebook-logo-v7hi2gs647dllnuv-v7hi2gs647dllnuv.jpg" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="https://static-00.iconduck.com/assets.00/twitter-icon-1024x845-91mj700l.png" alt="Twitter">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="https://www.clipartmax.com/png/full/231-2312557_500-instagram-logo-instagram-logo-white-vector.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Modal for Image Preview -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" class="img-fluid" id="modalImage" alt="Image Preview">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS to handle image modal -->
+    <script>
+        function openModal(element) {
+            var modalImg = document.getElementById("modalImage");
+            modalImg.src = element.src;
+        }
+    </script>
+</body>
+</html>
